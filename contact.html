@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us · {{APP_NAME}}</title>
-<meta name="description" content="Contact {{APP_NAME}} — registered office, email, phone and grievance officer.">
+<title>Contact Us · Click to sell</title>
+<meta name="description" content="Contact Click to sell — registered office, email, phone and grievance officer.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17.6 3H8a3 3 0 0 0-3 3v9.6a3 3 0 0 0 .88 2.12l9.4 9.4a3 3 0 0 0 4.24 0l7.6-7.6a3 3 0 0 0 0-4.24l-9.4-9.4A3 3 0 0 0 17.6 3Z' fill='%230E9F6E'/%3E%3Ccircle cx='11.5' cy='11.5' r='2.4' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +64,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
 .nav-links a{color:var(--body);font-weight:500;font-size:.97rem}
 .nav-links a:hover{color:var(--emerald-dk);text-decoration:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+header.site .wrap.nav{position:relative}
 
 /* hero */
 .hero{padding:74px 0 64px;background:
@@ -229,6 +230,7 @@ footer.site a:hover{color:#fff}
 }
 @media (max-width:620px){
   .nav-links{display:none}
+  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);padding:16px 24px 20px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow);z-index:40}
   .menu-btn{display:block}
   .steps,.cats,.pcards,.fgrid{grid-template-columns:1fr}
   .cta-strip{flex-direction:column;align-items:flex-start;text-align:left}
@@ -242,7 +244,7 @@ footer.site a:hover{color:#fff}
 <body>
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+    <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
     <nav class="nav-links">
       <a href="index.html#how">How it works</a>
       <a href="index.html#categories">Categories</a>
@@ -250,7 +252,7 @@ footer.site a:hover{color:#fff}
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-primary" href="index.html#get">Get the app</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(getComputedStyle(document.querySelector('.nav-links')).display==='none'?'flex':'none')">
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -267,16 +269,17 @@ footer.site a:hover{color:#fff}
     <div>
       <div class="cbox">
         <h3>Reach us directly</h3>
-        <div class="cline"><span class="ic">🏢</span><div><div class="k">Registered office</div><div class="val">{{COMPANY}}</div><div style="color:var(--body);font-size:.95rem">{{ADDRESS}}</div></div></div>
-        <div class="cline"><span class="ic">✉️</span><div><div class="k">Email</div><div class="val"><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div></div></div>
-        <div class="cline"><span class="ic">📞</span><div><div class="k">Phone</div><div class="val"><a href="tel:{{PHONE}}">{{PHONE}}</a></div></div></div>
+        <div class="cline"><span class="ic">🏢</span><div><div class="k">Registered office</div><div class="val">Click to sell</div><div style="color:var(--body);font-size:.95rem">A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065</div></div></div>
+        <div class="cline"><span class="ic">✉️</span><div><div class="k">Support email</div><div class="val"><a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div></div></div>
+        <div class="cline"><span class="ic">✉️</span><div><div class="k">Registered email</div><div class="val"><a href="mailto:ncincotechnologies@gmail.com">ncincotechnologies@gmail.com</a></div></div></div>
+        <div class="cline"><span class="ic">📞</span><div><div class="k">Phone</div><div class="val"><a href="tel:+919930238456">+91 99302 38456</a></div></div></div>
         <div class="cline"><span class="ic">🕘</span><div><div class="k">Support hours</div><div class="val">Mon–Sat, 10:00 AM – 7:00 PM IST</div></div></div>
       </div>
       <div class="cbox">
         <h3>Grievance Officer</h3>
         <p style="color:var(--muted);font-size:.95rem;margin:0 0 12px">In line with the Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023, you can contact our Grievance Officer for any complaints regarding content or your personal data.</p>
-        <div class="cline"><span class="ic">👤</span><div><div class="k">Name</div><div class="val">{{GRIEVANCE_NAME}}</div></div></div>
-        <div class="cline"><span class="ic">✉️</span><div><div class="k">Email</div><div class="val"><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div></div></div>
+        <div class="cline"><span class="ic">👤</span><div><div class="k">Name</div><div class="val">Vivek Parmar</div></div></div>
+        <div class="cline"><span class="ic">✉️</span><div><div class="k">Email</div><div class="val"><a href="mailto:ncincotechnologies@gmail.com">ncincotechnologies@gmail.com</a></div></div></div>
       </div>
     </div>
     <div>
@@ -286,7 +289,7 @@ footer.site a:hover{color:#fff}
         <div class="field"><label for="cname">Your name</label><input id="cname" type="text" placeholder="Full name"></div>
         <div class="field"><label for="cemail">Your email</label><input id="cemail" type="email" placeholder="you@example.com"></div>
         <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" rows="5" placeholder="How can we help?"></textarea></div>
-        <button class="btn btn-primary" type="button" onclick="(function(){var n=document.getElementById('cname').value,e=document.getElementById('cemail').value,m=document.getElementById('cmsg').value;window.location.href='mailto:{{EMAIL}}?subject='+encodeURIComponent('Support request from '+(n||'a user'))+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+e+')');})()">Send message</button>
+        <button class="btn btn-primary" type="button" onclick="(function(){var n=document.getElementById('cname').value,e=document.getElementById('cemail').value,m=document.getElementById('cmsg').value;window.location.href='mailto:support@clicktosell.co.in?subject='+encodeURIComponent('Support request from '+(n||'a user'))+'&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+e+')');})()">Send message</button>
       </div>
     </div>
   </div>
@@ -296,7 +299,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+        <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
         <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
         <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">Available on iOS &amp; Android.</p>
       </div>
@@ -321,16 +324,16 @@ footer.site a:hover{color:#fff}
       <div>
         <h4>Reach us</h4>
         <address class="addr">
-          <strong>{{COMPANY}}</strong><br>
-          {{ADDRESS}}<br>
-          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
-          <a href="tel:{{PHONE}}">{{PHONE}}</a>
+          <strong>Click to sell</strong><br>
+          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065<br>
+          <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a><br>
+          <a href="tel:+919930238456">+91 99302 38456</a>
         </address>
       </div>
     </div>
     <div class="fbot">
-      <div>© {{YEAR}} {{COMPANY}}. All rights reserved.</div>
-      <div>Grievance Officer: {{GRIEVANCE_NAME}} · <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      <div>© 2026 Click to sell. All rights reserved.</div>
+      <div>Grievance Officer: Vivek Parmar · <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div>
     </div>
   </div>
 </footer>

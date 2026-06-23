@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buy & Sell Locally · {{APP_NAME}}</title>
-<meta name="description" content="{{APP_NAME}} is a local classifieds marketplace to buy and sell pre-owned goods near you.">
+<title>Buy & Sell Locally · Click to sell</title>
+<meta name="description" content="Click to sell is a local classifieds marketplace to buy and sell pre-owned goods near you.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17.6 3H8a3 3 0 0 0-3 3v9.6a3 3 0 0 0 .88 2.12l9.4 9.4a3 3 0 0 0 4.24 0l7.6-7.6a3 3 0 0 0 0-4.24l-9.4-9.4A3 3 0 0 0 17.6 3Z' fill='%230E9F6E'/%3E%3Ccircle cx='11.5' cy='11.5' r='2.4' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +64,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
 .nav-links a{color:var(--body);font-weight:500;font-size:.97rem}
 .nav-links a:hover{color:var(--emerald-dk);text-decoration:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+header.site .wrap.nav{position:relative}
 
 /* hero */
 .hero{padding:74px 0 64px;background:
@@ -229,6 +230,7 @@ footer.site a:hover{color:#fff}
 }
 @media (max-width:620px){
   .nav-links{display:none}
+  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);padding:16px 24px 20px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow);z-index:40}
   .menu-btn{display:block}
   .steps,.cats,.pcards,.fgrid{grid-template-columns:1fr}
   .cta-strip{flex-direction:column;align-items:flex-start;text-align:left}
@@ -242,7 +244,7 @@ footer.site a:hover{color:#fff}
 <body>
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+    <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
     <nav class="nav-links">
       <a href="index.html#how">How it works</a>
       <a href="index.html#categories">Categories</a>
@@ -250,7 +252,7 @@ footer.site a:hover{color:#fff}
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-primary" href="index.html#get">Get the app</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(getComputedStyle(document.querySelector('.nav-links')).display==='none'?'flex':'none')">
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -262,8 +264,8 @@ footer.site a:hover{color:#fff}
       <h1>Buy &amp; sell <span class="hl">anything</span>, right near you.</h1>
       <p class="lead">List in under a minute, chat with real buyers, and close the deal in your neighbourhood.</p>
       <div class="hero-cta" id="get">
-        <a class="store" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M16.5 1.5c0 1.2-.5 2.3-1.3 3.1-.9.9-2 1.5-3.1 1.4-.1-1.2.5-2.4 1.2-3.1.9-.9 2.2-1.5 3.2-1.4Zm3.4 16c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.3-4 3.3-1.5 0-1.9-1-3.9-1-2 0-2.5 1-3.9 1-1.7 0-3-1.7-4-3.1C1.3 16.4.6 11.7 2.7 8.9 3.8 7.3 5.7 6.4 7.5 6.4c1.7 0 2.7 1 4.1 1 1.3 0 2.1-1 4.1-1 1.5 0 3.2.9 4.3 2.4-3.8 2-3.2 7.4-.1 8.7Z"/></svg><div><small>Download on the</small><span>App Store</span></div></a>
-        <a class="store" href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M3.6 2.2 13 11.6l-9.4 9.4c-.3-.2-.5-.6-.5-1.1V3.3c0-.5.2-.9.5-1.1Zm10.8 10.8 2.7 2.7-9.9 5.6 7.2-8.3Zm0-2.8L7.2 2 17.1 7.5l-2.7 2.7Zm1.4 1.4 3.4-1.9c.6-.4.6-1.4 0-1.8l-3.4-1.9 2.9 2.8-2.9 2.8Z"/></svg><div><small>Get it on</small><span>Google Play</span></div></a>
+        <a class="store" href="contact.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M16.5 1.5c0 1.2-.5 2.3-1.3 3.1-.9.9-2 1.5-3.1 1.4-.1-1.2.5-2.4 1.2-3.1.9-.9 2.2-1.5 3.2-1.4Zm3.4 16c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.3-4 3.3-1.5 0-1.9-1-3.9-1-2 0-2.5 1-3.9 1-1.7 0-3-1.7-4-3.1C1.3 16.4.6 11.7 2.7 8.9 3.8 7.3 5.7 6.4 7.5 6.4c1.7 0 2.7 1 4.1 1 1.3 0 2.1-1 4.1-1 1.5 0 3.2.9 4.3 2.4-3.8 2-3.2 7.4-.1 8.7Z"/></svg><div><small>Download on the</small><span>App Store</span></div></a>
+        <a class="store" href="contact.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M3.6 2.2 13 11.6l-9.4 9.4c-.3-.2-.5-.6-.5-1.1V3.3c0-.5.2-.9.5-1.1Zm10.8 10.8 2.7 2.7-9.9 5.6 7.2-8.3Zm0-2.8L7.2 2 17.1 7.5l-2.7 2.7Zm1.4 1.4 3.4-1.9c.6-.4.6-1.4 0-1.8l-3.4-1.9 2.9 2.8-2.9 2.8Z"/></svg><div><small>Get it on</small><span>Google Play</span></div></a>
       </div>
       <div class="trust-line"><span class="dot"></span>Free to list · Verified chat · Deal locally &amp; safely</div>
     </div>
@@ -334,7 +336,7 @@ footer.site a:hover{color:#fff}
     </div>
     <div class="panel">
       <h3>A marketplace, not a middleman</h3>
-      <p>{{APP_NAME}} connects buyers and sellers. Deals for second-hand items happen directly between users — we simply make finding each other easy.</p>
+      <p>Click to sell connects buyers and sellers. Deals for second-hand items happen directly between users — we simply make finding each other easy.</p>
       <div class="stat-row">
         <div class="stat"><div class="v">1 min</div><div class="l">to post a listing</div></div>
         <div class="stat"><div class="v">Free</div><div class="l">basic listings</div></div>
@@ -349,7 +351,7 @@ footer.site a:hover{color:#fff}
     <div class="cta-strip">
       <div>
         <h2>Ready to find your next deal?</h2>
-        <p>Download {{APP_NAME}} and start buying &amp; selling near you today.</p>
+        <p>Download Click to sell and start buying &amp; selling near you today.</p>
       </div>
       <a class="btn btn-primary" href="#get">Get the app</a>
     </div>
@@ -360,7 +362,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+        <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
         <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
         <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">Available on iOS &amp; Android.</p>
       </div>
@@ -385,16 +387,16 @@ footer.site a:hover{color:#fff}
       <div>
         <h4>Reach us</h4>
         <address class="addr">
-          <strong>{{COMPANY}}</strong><br>
-          {{ADDRESS}}<br>
-          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
-          <a href="tel:{{PHONE}}">{{PHONE}}</a>
+          <strong>Click to sell</strong><br>
+          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065<br>
+          <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a><br>
+          <a href="tel:+919930238456">+91 99302 38456</a>
         </address>
       </div>
     </div>
     <div class="fbot">
-      <div>© {{YEAR}} {{COMPANY}}. All rights reserved.</div>
-      <div>Grievance Officer: {{GRIEVANCE_NAME}} · <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      <div>© 2026 Click to sell. All rights reserved.</div>
+      <div>Grievance Officer: Vivek Parmar · <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div>
     </div>
   </div>
 </footer>

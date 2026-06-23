@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Service Delivery · {{APP_NAME}}</title>
-<meta name="description" content="How digital services are delivered on {{APP_NAME}}.">
+<title>Service Delivery · Click to sell</title>
+<meta name="description" content="How digital services are delivered on Click to sell.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17.6 3H8a3 3 0 0 0-3 3v9.6a3 3 0 0 0 .88 2.12l9.4 9.4a3 3 0 0 0 4.24 0l7.6-7.6a3 3 0 0 0 0-4.24l-9.4-9.4A3 3 0 0 0 17.6 3Z' fill='%230E9F6E'/%3E%3Ccircle cx='11.5' cy='11.5' r='2.4' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +64,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
 .nav-links a{color:var(--body);font-weight:500;font-size:.97rem}
 .nav-links a:hover{color:var(--emerald-dk);text-decoration:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+header.site .wrap.nav{position:relative}
 
 /* hero */
 .hero{padding:74px 0 64px;background:
@@ -229,6 +230,7 @@ footer.site a:hover{color:#fff}
 }
 @media (max-width:620px){
   .nav-links{display:none}
+  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);padding:16px 24px 20px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow);z-index:40}
   .menu-btn{display:block}
   .steps,.cats,.pcards,.fgrid{grid-template-columns:1fr}
   .cta-strip{flex-direction:column;align-items:flex-start;text-align:left}
@@ -242,7 +244,7 @@ footer.site a:hover{color:#fff}
 <body>
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+    <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
     <nav class="nav-links">
       <a href="index.html#how">How it works</a>
       <a href="index.html#categories">Categories</a>
@@ -250,7 +252,7 @@ footer.site a:hover{color:#fff}
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-primary" href="index.html#get">Get the app</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(getComputedStyle(document.querySelector('.nav-links')).display==='none'?'flex':'none')">
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -259,7 +261,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <span class="tag">Legal</span>
     <h1>Service Delivery Policy</h1>
-    <p class="updated">Last updated: {{LAST_UPDATED}}</p>
+    <p class="updated">Last updated: 23 June 2026</p>
   </div>
 </section>
 <section class="doc">
@@ -268,16 +270,16 @@ footer.site a:hover{color:#fff}
       <div class="toc"><h4>On this page</h4><ol><li><a href="#">About this policy</a></li><li><a href="#">Delivery of digital services</a></li><li><a href="#">Items between users</a></li><li><a href="#">Contact</a></li></ol></div>
       
 <h2>1. About this policy</h2>
-<p>{{APP_NAME}} is a digital marketplace. The paid services we offer are <strong>digital services</strong>, so no physical goods are shipped by {{COMPANY}}. This policy explains how those digital services are delivered, and clarifies how item handover works between users.</p>
+<p>Click to sell is a digital marketplace. The paid services we offer are <strong>digital services</strong>, so no physical goods are shipped by Click to sell. This policy explains how those digital services are delivered, and clarifies how item handover works between users.</p>
 
 <h2>2. Delivery of digital services</h2>
-<p>When you purchase a paid service such as a featured listing, boost or subscription, it is delivered electronically and activated on your account or listing <strong>immediately, or within a few minutes</strong> of a successful payment. You will be able to see the service reflected on your listing once it is active. If a paid service does not activate within a reasonable time, please contact <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+<p>When you purchase a paid service such as a featured listing, boost or subscription, it is delivered electronically and activated on your account or listing <strong>immediately, or within a few minutes</strong> of a successful payment. You will be able to see the service reflected on your listing once it is active. If a paid service does not activate within a reasonable time, please contact <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a>.</p>
 
 <h2>3. Sale and delivery of items between users</h2>
-<p>For second-hand items listed on the Platform, the sale, payment and handover or delivery of the item are arranged <strong>directly between the buyer and the seller</strong>. {{APP_NAME}} does not ship, deliver, courier or guarantee delivery of any item listed by users. We recommend that users meet in a safe public place, inspect items before paying, and agree on handover arrangements between themselves.</p>
+<p>For second-hand items listed on the Platform, the sale, payment and handover or delivery of the item are arranged <strong>directly between the buyer and the seller</strong>. Click to sell does not ship, deliver, courier or guarantee delivery of any item listed by users. We recommend that users meet in a safe public place, inspect items before paying, and agree on handover arrangements between themselves.</p>
 
 <h2>4. Contact</h2>
-<p>Questions about service delivery? Email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> or write to {{COMPANY}}, {{ADDRESS}}.</p>
+<p>Questions about service delivery? Email <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a> or write to Click to sell, A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065.</p>
 
     </div>
   </div>
@@ -286,7 +288,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+        <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
         <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
         <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">Available on iOS &amp; Android.</p>
       </div>
@@ -311,16 +313,16 @@ footer.site a:hover{color:#fff}
       <div>
         <h4>Reach us</h4>
         <address class="addr">
-          <strong>{{COMPANY}}</strong><br>
-          {{ADDRESS}}<br>
-          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
-          <a href="tel:{{PHONE}}">{{PHONE}}</a>
+          <strong>Click to sell</strong><br>
+          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065<br>
+          <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a><br>
+          <a href="tel:+919930238456">+91 99302 38456</a>
         </address>
       </div>
     </div>
     <div class="fbot">
-      <div>© {{YEAR}} {{COMPANY}}. All rights reserved.</div>
-      <div>Grievance Officer: {{GRIEVANCE_NAME}} · <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      <div>© 2026 Click to sell. All rights reserved.</div>
+      <div>Grievance Officer: Vivek Parmar · <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div>
     </div>
   </div>
 </footer>

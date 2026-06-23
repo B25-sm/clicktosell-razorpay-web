@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions · {{APP_NAME}}</title>
-<meta name="description" content="Terms and Conditions for using the {{APP_NAME}} marketplace.">
+<title>Terms & Conditions · Click to sell</title>
+<meta name="description" content="Terms and Conditions for using the Click to sell marketplace.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17.6 3H8a3 3 0 0 0-3 3v9.6a3 3 0 0 0 .88 2.12l9.4 9.4a3 3 0 0 0 4.24 0l7.6-7.6a3 3 0 0 0 0-4.24l-9.4-9.4A3 3 0 0 0 17.6 3Z' fill='%230E9F6E'/%3E%3Ccircle cx='11.5' cy='11.5' r='2.4' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +64,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
 .nav-links a{color:var(--body);font-weight:500;font-size:.97rem}
 .nav-links a:hover{color:var(--emerald-dk);text-decoration:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+header.site .wrap.nav{position:relative}
 
 /* hero */
 .hero{padding:74px 0 64px;background:
@@ -229,6 +230,7 @@ footer.site a:hover{color:#fff}
 }
 @media (max-width:620px){
   .nav-links{display:none}
+  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);padding:16px 24px 20px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow);z-index:40}
   .menu-btn{display:block}
   .steps,.cats,.pcards,.fgrid{grid-template-columns:1fr}
   .cta-strip{flex-direction:column;align-items:flex-start;text-align:left}
@@ -242,7 +244,7 @@ footer.site a:hover{color:#fff}
 <body>
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+    <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
     <nav class="nav-links">
       <a href="index.html#how">How it works</a>
       <a href="index.html#categories">Categories</a>
@@ -250,7 +252,7 @@ footer.site a:hover{color:#fff}
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-primary" href="index.html#get">Get the app</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(getComputedStyle(document.querySelector('.nav-links')).display==='none'?'flex':'none')">
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -259,7 +261,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <span class="tag">Legal</span>
     <h1>Terms &amp; Conditions</h1>
-    <p class="updated">Last updated: {{LAST_UPDATED}}</p>
+    <p class="updated">Last updated: 23 June 2026</p>
   </div>
 </section>
 <section class="doc">
@@ -268,16 +270,16 @@ footer.site a:hover{color:#fff}
       <div class="toc"><h4>On this page</h4><ol><li><a href="#">Acceptance</a></li><li><a href="#">Eligibility</a></li><li><a href="#">Your account</a></li><li><a href="#">Nature of service</a></li><li><a href="#">Listings &amp; conduct</a></li><li><a href="#">Paid services</a></li><li><a href="#">Payments</a></li><li><a href="#">Intellectual property</a></li><li><a href="#">Liability</a></li><li><a href="#">Indemnity</a></li><li><a href="#">Termination</a></li><li><a href="#">Grievance</a></li><li><a href="#">Governing law</a></li><li><a href="#">Changes</a></li><li><a href="#">Contact</a></li></ol></div>
       
 <h2>1. Acceptance of these Terms</h2>
-<p>Welcome to {{APP_NAME}}, operated by {{COMPANY}} ("we", "us", "our"). These Terms &amp; Conditions ("Terms") govern your access to and use of the {{APP_NAME}} mobile application and website (together, the "Platform"). By creating an account or using the Platform, you confirm that you have read, understood and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use the Platform.</p>
+<p>Welcome to Click to sell, operated by Click to sell ("we", "us", "our"). These Terms &amp; Conditions ("Terms") govern your access to and use of the Click to sell mobile application and website (together, the "Platform"). By creating an account or using the Platform, you confirm that you have read, understood and agree to be bound by these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use the Platform.</p>
 
 <h2>2. Who can use the Platform</h2>
-<p>You must be at least 18 years old and legally capable of entering into a binding contract to use {{APP_NAME}}. By using the Platform you represent that you meet these requirements and that the information you provide is accurate and complete.</p>
+<p>You must be at least 18 years old and legally capable of entering into a binding contract to use Click to sell. By using the Platform you represent that you meet these requirements and that the information you provide is accurate and complete.</p>
 
 <h2>3. Your account</h2>
-<p>You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. Notify us immediately at <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> if you suspect any unauthorised use. We may suspend or terminate accounts that violate these Terms.</p>
+<p>You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account. Notify us immediately at <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a> if you suspect any unauthorised use. We may suspend or terminate accounts that violate these Terms.</p>
 
 <h2>4. Nature of the service</h2>
-<p>{{APP_NAME}} is an online marketplace and intermediary that allows users to list, discover and communicate about goods and services. We are <strong>not</strong> a party to any transaction between a buyer and a seller. We do not own, sell, inspect, store, deliver or guarantee any item listed on the Platform. Any contract for the sale of an item is concluded directly between the buyer and the seller, who are solely responsible for it.</p>
+<p>Click to sell is an online marketplace and intermediary that allows users to list, discover and communicate about goods and services. We are <strong>not</strong> a party to any transaction between a buyer and a seller. We do not own, sell, inspect, store, deliver or guarantee any item listed on the Platform. Any contract for the sale of an item is concluded directly between the buyer and the seller, who are solely responsible for it.</p>
 
 <h2>5. Listings and user conduct</h2>
 <p>When you post a listing or otherwise use the Platform, you agree that you will not:</p>
@@ -298,19 +300,19 @@ footer.site a:hover{color:#fff}
 <p>Payments for paid services are processed through third-party payment gateways (including Razorpay). We do not collect or store your full card details. Your use of a payment gateway is also subject to that provider's own terms and privacy policy.</p>
 
 <h2>8. Intellectual property</h2>
-<p>The Platform, including its design, logos, text and software, is owned by {{COMPANY}} and protected by applicable laws. You retain ownership of the content you post but grant us a non-exclusive, royalty-free licence to host, display and distribute that content for the purpose of operating and promoting the Platform.</p>
+<p>The Platform, including its design, logos, text and software, is owned by Click to sell and protected by applicable laws. You retain ownership of the content you post but grant us a non-exclusive, royalty-free licence to host, display and distribute that content for the purpose of operating and promoting the Platform.</p>
 
 <h2>9. Disclaimers and limitation of liability</h2>
-<p>The Platform is provided "as is" and "as available" without warranties of any kind. We do not warrant the quality, safety, legality or accuracy of any listing or the conduct of any user. To the maximum extent permitted by law, {{COMPANY}} shall not be liable for any indirect, incidental or consequential loss, or for any loss arising from transactions or interactions between users.</p>
+<p>The Platform is provided "as is" and "as available" without warranties of any kind. We do not warrant the quality, safety, legality or accuracy of any listing or the conduct of any user. To the maximum extent permitted by law, Click to sell shall not be liable for any indirect, incidental or consequential loss, or for any loss arising from transactions or interactions between users.</p>
 
 <h2>10. Indemnity</h2>
-<p>You agree to indemnify and hold harmless {{COMPANY}} and its officers, employees and partners from any claim or demand arising out of your use of the Platform, your listings, or your breach of these Terms.</p>
+<p>You agree to indemnify and hold harmless Click to sell and its officers, employees and partners from any claim or demand arising out of your use of the Platform, your listings, or your breach of these Terms.</p>
 
 <h2>11. Suspension and termination</h2>
 <p>We may suspend or terminate your access to the Platform at any time, with or without notice, if you breach these Terms or if we are required to do so by law.</p>
 
 <h2>12. Intermediary status and grievance redressal</h2>
-<p>{{APP_NAME}} is an "intermediary" under the Information Technology Act, 2000 and the rules made thereunder. We observe due diligence as required by law. Complaints regarding any content on the Platform may be addressed to our Grievance Officer (see the <a href="contact.html">Contact</a> page).</p>
+<p>Click to sell is an "intermediary" under the Information Technology Act, 2000 and the rules made thereunder. We observe due diligence as required by law. Complaints regarding any content on the Platform may be addressed to our Grievance Officer (see the <a href="contact.html">Contact</a> page).</p>
 
 <h2>13. Governing law and jurisdiction</h2>
 <p>These Terms are governed by the laws of India. Subject to applicable law, the courts at the location of our registered office shall have exclusive jurisdiction over any dispute arising out of or relating to these Terms.</p>
@@ -319,7 +321,7 @@ footer.site a:hover{color:#fff}
 <p>We may update these Terms from time to time. The updated version will be posted on this page with a revised "Last updated" date. Continued use of the Platform after changes take effect constitutes acceptance of the revised Terms.</p>
 
 <h2>15. Contact</h2>
-<p>Questions about these Terms? Email us at <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> or write to {{COMPANY}}, {{ADDRESS}}.</p>
+<p>Questions about these Terms? Email us at <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a> or write to Click to sell, A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065.</p>
 
     </div>
   </div>
@@ -328,7 +330,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+        <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
         <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
         <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">Available on iOS &amp; Android.</p>
       </div>
@@ -353,16 +355,16 @@ footer.site a:hover{color:#fff}
       <div>
         <h4>Reach us</h4>
         <address class="addr">
-          <strong>{{COMPANY}}</strong><br>
-          {{ADDRESS}}<br>
-          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
-          <a href="tel:{{PHONE}}">{{PHONE}}</a>
+          <strong>Click to sell</strong><br>
+          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065<br>
+          <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a><br>
+          <a href="tel:+919930238456">+91 99302 38456</a>
         </address>
       </div>
     </div>
     <div class="fbot">
-      <div>© {{YEAR}} {{COMPANY}}. All rights reserved.</div>
-      <div>Grievance Officer: {{GRIEVANCE_NAME}} · <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      <div>© 2026 Click to sell. All rights reserved.</div>
+      <div>Grievance Officer: Vivek Parmar · <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div>
     </div>
   </div>
 </footer>

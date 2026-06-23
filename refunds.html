@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Refund & Cancellation · {{APP_NAME}}</title>
-<meta name="description" content="Refund and cancellation terms for paid services on {{APP_NAME}}.">
+<title>Refund & Cancellation · Click to sell</title>
+<meta name="description" content="Refund and cancellation terms for paid services on Click to sell.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17.6 3H8a3 3 0 0 0-3 3v9.6a3 3 0 0 0 .88 2.12l9.4 9.4a3 3 0 0 0 4.24 0l7.6-7.6a3 3 0 0 0 0-4.24l-9.4-9.4A3 3 0 0 0 17.6 3Z' fill='%230E9F6E'/%3E%3Ccircle cx='11.5' cy='11.5' r='2.4' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +64,7 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
 .nav-links a{color:var(--body);font-weight:500;font-size:.97rem}
 .nav-links a:hover{color:var(--emerald-dk);text-decoration:none}
 .menu-btn{display:none;background:none;border:0;cursor:pointer;padding:8px}
+header.site .wrap.nav{position:relative}
 
 /* hero */
 .hero{padding:74px 0 64px;background:
@@ -229,6 +230,7 @@ footer.site a:hover{color:#fff}
 }
 @media (max-width:620px){
   .nav-links{display:none}
+  .nav-links.open{display:flex!important;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(255,255,255,.98);padding:16px 24px 20px;border-bottom:1px solid var(--line);gap:14px;box-shadow:var(--shadow);z-index:40}
   .menu-btn{display:block}
   .steps,.cats,.pcards,.fgrid{grid-template-columns:1fr}
   .cta-strip{flex-direction:column;align-items:flex-start;text-align:left}
@@ -242,7 +244,7 @@ footer.site a:hover{color:#fff}
 <body>
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+    <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
     <nav class="nav-links">
       <a href="index.html#how">How it works</a>
       <a href="index.html#categories">Categories</a>
@@ -250,7 +252,7 @@ footer.site a:hover{color:#fff}
       <a href="contact.html">Contact</a>
     </nav>
     <a class="btn btn-primary" href="index.html#get">Get the app</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(getComputedStyle(document.querySelector('.nav-links')).display==='none'?'flex':'none')">
+    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-expanded="false">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
@@ -259,7 +261,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <span class="tag">Legal</span>
     <h1>Refund &amp; Cancellation Policy</h1>
-    <p class="updated">Last updated: {{LAST_UPDATED}}</p>
+    <p class="updated">Last updated: 23 June 2026</p>
   </div>
 </section>
 <section class="doc">
@@ -267,10 +269,8 @@ footer.site a:hover{color:#fff}
     <div class="doc-inner">
       <div class="toc"><h4>On this page</h4><ol><li><a href="#">Scope</a></li><li><a href="#">Nature of paid services</a></li><li><a href="#">Eligibility</a></li><li><a href="#">Not available</a></li><li><a href="#">How to request</a></li><li><a href="#">Processing time</a></li><li><a href="#">Subscriptions</a></li><li><a href="#">Contact</a></li></ol></div>
       
-<div class="callout"><strong>Note for the business owner:</strong> the timelines and terms below are a sensible default. Edit them so they exactly match how you actually handle refunds — Razorpay specifically checks that this page states clear, real processing timelines.</div>
-
-<h2>1. Scope of this policy</h2>
-<p>This Refund &amp; Cancellation Policy applies to optional <strong>paid services</strong> purchased on the {{APP_NAME}} Platform — for example featured listings, listing boosts and subscription plans (see <a href="pricing.html">Pricing</a>). {{APP_NAME}} is a marketplace that connects buyers and sellers; sales of second-hand items happen <strong>directly between users</strong> and are not processed, controlled or refunded by us. This policy does not cover such user-to-user transactions.</p>
+<h2 id="scope">1. Scope of this policy</h2>
+<p>This Refund &amp; Cancellation Policy applies to optional <strong>paid services</strong> purchased on the Click to sell Platform — for example featured listings, listing boosts and subscription plans (see <a href="pricing.html">Pricing</a>). Click to sell is a marketplace that connects buyers and sellers; sales of second-hand items happen <strong>directly between users</strong> and are not processed, controlled or refunded by us. This policy does not cover such user-to-user transactions.</p>
 
 <h2>2. Nature of paid services</h2>
 <p>Paid services are digital promotional services that are activated on your listing immediately or shortly after a successful payment. Because the benefit begins as soon as the service is activated, paid services are generally non-refundable once activated, except in the situations described below.</p>
@@ -292,7 +292,7 @@ footer.site a:hover{color:#fff}
 </ul>
 
 <h2>5. How to request a refund</h2>
-<p>Email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> within <strong>7 days</strong> of the transaction with your registered mobile number, the payment/transaction ID and a brief description of the issue. Our team will review and respond, usually within 2–3 business days.</p>
+<p>Email <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a> within <strong>7 days</strong> of the transaction with your registered mobile number, the payment/transaction ID and a brief description of the issue. Our team will review and respond, usually within 2–3 business days.</p>
 
 <h2>6. Refund processing time</h2>
 <p>Where a refund is approved, it will be processed to your original payment method within <strong>5–7 business days</strong>. Depending on your bank or card issuer, it may take a few additional days for the amount to reflect in your account.</p>
@@ -301,7 +301,7 @@ footer.site a:hover{color:#fff}
 <p>You may cancel a subscription at any time from your account settings or by contacting us. Cancellation stops future renewals; your benefits continue until the end of the current billing period, and we do not provide pro-rata refunds for the unused part of a period unless required by law.</p>
 
 <h2>8. Contact</h2>
-<p>For any questions about refunds or cancellations, email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> or write to {{COMPANY}}, {{ADDRESS}}.</p>
+<p>For any questions about refunds or cancellations, email <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a> or write to Click to sell, A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065.</p>
 
     </div>
   </div>
@@ -310,7 +310,7 @@ footer.site a:hover{color:#fff}
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <a class="brand" href="index.html"><span class="logo"></span>{{APP_NAME}}</a>
+        <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
         <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
         <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">Available on iOS &amp; Android.</p>
       </div>
@@ -335,16 +335,16 @@ footer.site a:hover{color:#fff}
       <div>
         <h4>Reach us</h4>
         <address class="addr">
-          <strong>{{COMPANY}}</strong><br>
-          {{ADDRESS}}<br>
-          <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><br>
-          <a href="tel:{{PHONE}}">{{PHONE}}</a>
+          <strong>Click to sell</strong><br>
+          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065<br>
+          <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a><br>
+          <a href="tel:+919930238456">+91 99302 38456</a>
         </address>
       </div>
     </div>
     <div class="fbot">
-      <div>© {{YEAR}} {{COMPANY}}. All rights reserved.</div>
-      <div>Grievance Officer: {{GRIEVANCE_NAME}} · <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></div>
+      <div>© 2026 Click to sell. All rights reserved.</div>
+      <div>Grievance Officer: Vivek Parmar · <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div>
     </div>
   </div>
 </footer>
