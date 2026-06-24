@@ -80,6 +80,9 @@ header.site .wrap.nav{position:relative}
 .store:hover{color:#fff;text-decoration:none;background:#1e293b}
 .store small{display:block;font-size:.62rem;font-weight:500;opacity:.75;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
 .store span{font-size:1.02rem;line-height:1.1}
+.store.soon{opacity:.88;cursor:default;pointer-events:none}
+.app-soon-label{margin:0 0 12px;color:var(--muted);font-size:.92rem;font-weight:500}
+.store-row{display:flex;gap:14px;flex-wrap:wrap}
 .trust-line{margin-top:24px;color:var(--muted);font-size:.92rem;display:flex;align-items:center;gap:10px}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--marigold)}
 
@@ -264,8 +267,13 @@ footer.site a:hover{color:#fff}
       <h1>Buy &amp; sell <span class="hl">anything</span>, right near you.</h1>
       <p class="lead">List in under a minute, chat with real buyers, and close the deal in your neighbourhood.</p>
       <div class="hero-cta" id="get">
-        <a class="store" href="contact.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M16.5 1.5c0 1.2-.5 2.3-1.3 3.1-.9.9-2 1.5-3.1 1.4-.1-1.2.5-2.4 1.2-3.1.9-.9 2.2-1.5 3.2-1.4Zm3.4 16c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.3-4 3.3-1.5 0-1.9-1-3.9-1-2 0-2.5 1-3.9 1-1.7 0-3-1.7-4-3.1C1.3 16.4.6 11.7 2.7 8.9 3.8 7.3 5.7 6.4 7.5 6.4c1.7 0 2.7 1 4.1 1 1.3 0 2.1-1 4.1-1 1.5 0 3.2.9 4.3 2.4-3.8 2-3.2 7.4-.1 8.7Z"/></svg><div><small>Download on the</small><span>App Store</span></div></a>
-        <a class="store" href="contact.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M3.6 2.2 13 11.6l-9.4 9.4c-.3-.2-.5-.6-.5-1.1V3.3c0-.5.2-.9.5-1.1Zm10.8 10.8 2.7 2.7-9.9 5.6 7.2-8.3Zm0-2.8L7.2 2 17.1 7.5l-2.7 2.7Zm1.4 1.4 3.4-1.9c.6-.4.6-1.4 0-1.8l-3.4-1.9 2.9 2.8-2.9 2.8Z"/></svg><div><small>Get it on</small><span>Google Play</span></div></a>
+        <!-- When the app is live, replace the spans below with <a class="store" href="YOUR_APP_STORE_URL"> and <a class="store" href="YOUR_PLAY_STORE_URL"> -->
+        <p class="app-soon-label">Mobile app launching soon on iOS &amp; Android</p>
+        <div class="store-row">
+          <span class="store soon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.5 1.5c0 1.2-.5 2.3-1.3 3.1-.9.9-2 1.5-3.1 1.4-.1-1.2.5-2.4 1.2-3.1.9-.9 2.2-1.5 3.2-1.4Zm3.4 16c-.5 1.2-.8 1.7-1.5 2.8-1 1.5-2.3 3.3-4 3.3-1.5 0-1.9-1-3.9-1-2 0-2.5 1-3.9 1-1.7 0-3-1.7-4-3.1C1.3 16.4.6 11.7 2.7 8.9 3.8 7.3 5.7 6.4 7.5 6.4c1.7 0 2.7 1 4.1 1 1.3 0 2.1-1 4.1-1 1.5 0 3.2.9 4.3 2.4-3.8 2-3.2 7.4-.1 8.7Z"/></svg><div><small>Coming to</small><span>App Store</span></div></span>
+          <span class="store soon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3.6 2.2 13 11.6l-9.4 9.4c-.3-.2-.5-.6-.5-1.1V3.3c0-.5.2-.9.5-1.1Zm10.8 10.8 2.7 2.7-9.9 5.6 7.2-8.3Zm0-2.8L7.2 2 17.1 7.5l-2.7 2.7Zm1.4 1.4 3.4-1.9c.6-.4.6-1.4 0-1.8l-3.4-1.9 2.9 2.8-2.9 2.8Z"/></svg><div><small>Coming to</small><span>Google Play</span></div></span>
+        </div>
+        <a class="btn btn-ghost" href="contact.html#notify" style="margin-top:14px">Get notified at launch</a>
       </div>
       <div class="trust-line"><span class="dot"></span>Free to list · Verified chat · Deal locally &amp; safely</div>
     </div>
@@ -351,9 +359,9 @@ footer.site a:hover{color:#fff}
     <div class="cta-strip">
       <div>
         <h2>Ready to find your next deal?</h2>
-        <p>Download Click to sell and start buying &amp; selling near you today.</p>
+        <p>Our mobile app launches soon — get notified and be first to buy &amp; sell near you.</p>
       </div>
-      <a class="btn btn-primary" href="#get">Get the app</a>
+      <a class="btn btn-primary" href="contact.html#notify">Notify me at launch</a>
     </div>
   </div>
 </section>
@@ -364,7 +372,7 @@ footer.site a:hover{color:#fff}
       <div class="fbrand">
         <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
         <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
-        <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">Available on iOS &amp; Android.</p>
+        <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">iOS &amp; Android app launching soon.</p>
       </div>
       <div>
         <h4>Company</h4>
@@ -396,7 +404,7 @@ footer.site a:hover{color:#fff}
     </div>
     <div class="fbot">
       <div>© 2026 Click to sell. All rights reserved.</div>
-      <div>Grievance Officer: Vivek Parmar · <a href="mailto:support@clicktosell.co.in">support@clicktosell.co.in</a></div>
+      <div>Grievance Officer: Vivek Parmar · <a href="mailto:ncincotechnologies@gmail.com">ncincotechnologies@gmail.com</a></div>
     </div>
   </div>
 </footer>

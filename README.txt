@@ -34,11 +34,28 @@ DEPLOY TO VERCEL
 
 RAZORPAY SUBMISSION URLS
 ------------------------
-  Website       https://your-domain.vercel.app
-  Terms         https://your-domain.vercel.app/terms.html
-  Privacy       https://your-domain.vercel.app/privacy.html
-  Refund/Cancel https://your-domain.vercel.app/refunds.html
-  Shipping      https://your-domain.vercel.app/shipping.html
-  Contact       https://your-domain.vercel.app/contact.html
+  Website       https://www.clicktosell.co.in/
+  Terms         https://www.clicktosell.co.in/terms.html
+  Privacy       https://www.clicktosell.co.in/privacy.html
+  Refund/Cancel https://www.clicktosell.co.in/refunds.html
+  Shipping      https://www.clicktosell.co.in/shipping.html
+  Contact       https://www.clicktosell.co.in/contact.html
+
+RAZORPAY KYC — USE THESE EXACT DETAILS
+--------------------------------------
+  Business name    Click to sell
+  Website          https://www.clicktosell.co.in/
+  Address          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065
+  Support email    support@clicktosell.co.in
+  Registered email ncincotechnologies@gmail.com
+  Phone            +91 99302 38456
+  Grievance Officer Vivek Parmar (ncincotechnologies@gmail.com)
+
+APP STORE LINKS (update index.html when live)
+---------------------------------------------
+  App Store URL    (not live yet — hero shows "Coming soon")
+  Play Store URL   (not live yet — hero shows "Coming soon")
+  When published, replace the <span class="store soon"> buttons in index.html
+  with <a class="store" href="..."> links to your real store URLs.
 
 Ensure address, phone and emails exactly match your Razorpay KYC before submitting.
