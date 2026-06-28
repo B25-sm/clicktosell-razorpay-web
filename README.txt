@@ -32,6 +32,22 @@ DEPLOY TO VERCEL
   3. Framework Preset: Other
   4. Deploy
 
+RAZORPAY RESUBMISSION — IMPORTANT
+---------------------------------
+Razorpay rejected the site when it read as a "pre-owned marketplace."
+Resubmit ONLY after deploying the updated copy.
+
+In Razorpay dashboard, describe your business as:
+  "Mobile listings platform. We collect online payments ONLY for
+   digital seller services — featured listings, listing boosts, and
+   seller subscriptions. We do NOT process payments for items between users."
+
+Suggested business category: Software / SaaS / Digital services
+(NOT marketplace, classifieds, or e-commerce for used goods)
+
+If rejected again, Razorpay may not support this business model at all.
+Consider Cashfree, PhonePe for Business, or PayU as alternatives.
+
 RAZORPAY SUBMISSION URLS
 ------------------------
   Website       https://www.clicktosell.co.in/

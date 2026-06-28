@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buy & Sell Locally · Click to sell</title>
-<meta name="description" content="Click to sell is a local classifieds marketplace to buy and sell pre-owned goods near you.">
+<title>Local Listings &amp; Seller Tools · Click to sell</title>
+<meta name="description" content="Click to sell is a local listings app. Free basic ads for sellers; optional paid promotion (boosts &amp; featured placement) purchased in our mobile app.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M17.6 3H8a3 3 0 0 0-3 3v9.6a3 3 0 0 0 .88 2.12l9.4 9.4a3 3 0 0 0 4.24 0l7.6-7.6a3 3 0 0 0 0-4.24l-9.4-9.4A3 3 0 0 0 17.6 3Z' fill='%230E9F6E'/%3E%3Ccircle cx='11.5' cy='11.5' r='2.4' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,6 +144,12 @@ section.block{padding:78px 0}
 .stat .v{font-family:var(--display);font-weight:800;font-size:1.7rem;color:#fff}
 .stat .l{font-size:.82rem;color:#9fb0cc}
 
+/* payment clarity */
+.pay-note{background:var(--emerald-soft);border:1px solid #b8e6d4;border-radius:var(--r-lg);padding:28px 30px;margin-top:46px}
+.pay-note h3{font-size:1.28rem;margin:0 0 10px}
+.pay-note p{margin:0;color:var(--body);font-size:1rem}
+.pay-note a{font-weight:600}
+
 /* CTA strip */
 .cta-strip{background:var(--emerald);color:#fff;border-radius:var(--r-lg);padding:46px 40px;
   display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
@@ -263,9 +269,9 @@ footer.site a:hover{color:#fff}
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="tag">Local marketplace</span>
-      <h1>Buy &amp; sell <span class="hl">anything</span>, right near you.</h1>
-      <p class="lead">List in under a minute, chat with real buyers, and close the deal in your neighbourhood.</p>
+      <span class="tag">Local listings app</span>
+      <h1>List for free. <span class="hl">Boost</span> when you're ready.</h1>
+      <p class="lead">Click to sell helps people post local ads and connect with nearby buyers. Basic listings are free — sellers can upgrade with featured placement and boost packages in our app.</p>
       <div class="hero-cta" id="get">
         <!-- When the app is live, replace the spans below with <a class="store" href="YOUR_APP_STORE_URL"> and <a class="store" href="YOUR_PLAY_STORE_URL"> -->
         <p class="app-soon-label">Mobile app launching soon on iOS &amp; Android</p>
@@ -275,21 +281,21 @@ footer.site a:hover{color:#fff}
         </div>
         <a class="btn btn-ghost" href="contact.html#notify" style="margin-top:14px">Get notified at launch</a>
       </div>
-      <div class="trust-line"><span class="dot"></span>Free to list · Verified chat · Deal locally &amp; safely</div>
+      <div class="trust-line"><span class="dot"></span>Free basic listings · Paid boosts from ₹49 · No item payments on our platform</div>
     </div>
     <div class="showcase">
       <div class="phone">
         <div class="phone-bar"></div>
         <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-3.5-3.5"/></svg>Search "iPhone", "sofa", "bike"…</div>
         <div class="cards">
-          <div class="lcard g"><div class="ph"></div><div class="meta"><div class="price">₹12,500</div><div class="ttl">iPhone 11 · Andheri</div></div></div>
-          <div class="lcard"><div class="ph"></div><div class="meta"><div class="price">₹6,800</div><div class="ttl">Study desk · Powai</div></div></div>
-          <div class="lcard a"><div class="ph"></div><div class="meta"><div class="price">₹45,000</div><div class="ttl">Honda Activa · Thane</div></div></div>
-          <div class="lcard"><div class="ph"></div><div class="meta"><div class="price">₹3,200</div><div class="ttl">Cricket kit · Dadar</div></div></div>
+          <div class="lcard g"><div class="ph"></div><div class="meta"><div class="price" style="font-size:.78rem;color:var(--emerald-dk)">Featured</div><div class="ttl">iPhone 11 · Andheri</div></div></div>
+          <div class="lcard"><div class="ph"></div><div class="meta"><div class="price" style="font-size:.85rem">Basic ad</div><div class="ttl">Study desk · Powai</div></div></div>
+          <div class="lcard a"><div class="ph"></div><div class="meta"><div class="price" style="font-size:.78rem;color:#9A6207">Boost active</div><div class="ttl">Honda Activa · Thane</div></div></div>
+          <div class="lcard"><div class="ph"></div><div class="meta"><div class="price" style="font-size:.85rem">Basic ad</div><div class="ttl">Cricket kit · Dadar</div></div></div>
         </div>
       </div>
       <div class="float f1"><span class="ic" style="background:var(--emerald-soft)">💬</span>New message from buyer</div>
-      <div class="float f2"><span class="ic" style="background:var(--marigold-soft)">✅</span>Deal closed · ₹12,500</div>
+      <div class="float f2"><span class="ic" style="background:var(--marigold-soft)">⭐</span>Boost activated · 7 days</div>
     </div>
   </div>
 </section>
@@ -297,14 +303,14 @@ footer.site a:hover{color:#fff}
 <section class="block" id="how">
   <div class="wrap">
     <div class="head">
-      <span class="tag amber">Three simple steps</span>
-      <h2>From listing to handshake in minutes</h2>
-      <p>Selling something or hunting for a deal — the flow is the same, and it's quick.</p>
+      <span class="tag amber">How it works</span>
+      <h2>Post, connect, and grow your reach</h2>
+      <p>Free listings for everyone. Sellers who want more visibility can purchase optional promotion in the app.</p>
     </div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><h3>Post your listing</h3><p>Snap a few photos, set your price, pick a category. Your ad goes live to buyers nearby straight away.</p></div>
-      <div class="step"><div class="n">2</div><h3>Chat with buyers</h3><p>Interested people message you in-app. Discuss the details, agree a price, and plan where to meet.</p></div>
-      <div class="step"><div class="n">3</div><h3>Meet &amp; deal</h3><p>Meet in a safe public spot, check the item, and close the deal directly with the other person.</p></div>
+      <div class="step"><div class="n">1</div><h3>Post a free listing</h3><p>Snap photos, add a description, and publish a basic ad to buyers nearby — at no cost.</p></div>
+      <div class="step"><div class="n">2</div><h3>Chat with interested people</h3><p>Buyers message you in-app. Discuss details and arrange to meet on your own terms.</p></div>
+      <div class="step"><div class="n">3</div><h3>Upgrade with a boost</h3><p>Want more views? Purchase a featured listing or boost package in the app — our only paid product.</p></div>
     </div>
   </div>
 </section>
@@ -312,9 +318,9 @@ footer.site a:hover{color:#fff}
 <section class="block soft" id="categories">
   <div class="wrap">
     <div class="head">
-      <span class="tag">Browse</span>
-      <h2>Popular categories</h2>
-      <p>Thousands of fresh listings across the things people buy and sell every day.</p>
+      <span class="tag">Listing categories</span>
+      <h2>What people list on the app</h2>
+      <p>Users post local ads across everyday categories. Item sales and payments happen directly between users — not through Click to sell.</p>
     </div>
     <div class="cats">
       <a class="cat" href="index.html#get"><span class="e">📱</span>Mobiles &amp; Electronics</a>
@@ -338,28 +344,42 @@ footer.site a:hover{color:#fff}
       <ul>
         <li><span class="chk">✓</span><div>Chat inside the app, so you never share your personal number until you choose to.</div></li>
         <li><span class="chk">✓</span><div>Report &amp; block any listing or user that looks off — our team reviews every report.</div></li>
-        <li><span class="chk">✓</span><div>Meet in public, inspect before you pay, and never send money in advance to strangers.</div></li>
+        <li><span class="chk">✓</span><div>We never process payments for items between users — only for optional seller promotion tools.</div></li>
         <li><span class="chk">✓</span><div>Clear community rules keep prohibited and unsafe items off the platform.</div></li>
       </ul>
     </div>
     <div class="panel">
-      <h3>A marketplace, not a middleman</h3>
-      <p>Click to sell connects buyers and sellers. Deals for second-hand items happen directly between users — we simply make finding each other easy.</p>
+      <h3>A listings platform, not a payment middleman</h3>
+      <p>Click to sell provides listing, discovery, and chat tools. We do <strong>not</strong> process payments for items between users. Our only online payments are for <a href="pricing.html" style="color:#d6f3e7">digital seller services</a> — boosts, featured placement, and subscriptions.</p>
       <div class="stat-row">
-        <div class="stat"><div class="v">1 min</div><div class="l">to post a listing</div></div>
+        <div class="stat"><div class="v">₹49+</div><div class="l">paid seller tools</div></div>
         <div class="stat"><div class="v">Free</div><div class="l">basic listings</div></div>
-        <div class="stat"><div class="v">iOS · Android</div><div class="l">available on both</div></div>
+        <div class="stat"><div class="v">Digital</div><div class="l">service delivery</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block soft">
+<section class="block soft" id="paid">
+  <div class="wrap">
+    <div class="head">
+      <span class="tag amber">Our paid services</span>
+      <h2>What we charge for</h2>
+      <p>Click to sell earns revenue only from optional digital promotion sold to sellers. See full pricing on our <a href="pricing.html">Pricing</a> page.</p>
+    </div>
+    <div class="pay-note">
+      <h3>Online payments on Click to sell</h3>
+      <p>We accept payments <strong>only</strong> for digital seller services — featured listing placement, listing boosts, and Premium Seller subscriptions. These are activated electronically on a seller's ad after payment. We do <strong>not</strong> accept payments for items listed by users, and we are not a party to any sale between users. <a href="pricing.html">View pricing →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
   <div class="wrap">
     <div class="cta-strip">
       <div>
-        <h2>Ready to find your next deal?</h2>
-        <p>Our mobile app launches soon — get notified and be first to buy &amp; sell near you.</p>
+        <h2>Ready to list locally?</h2>
+        <p>Our mobile app launches soon. Basic listings are free — paid boosts available when you need more reach.</p>
       </div>
       <a class="btn btn-primary" href="contact.html#notify">Notify me at launch</a>
     </div>
@@ -371,7 +391,7 @@ footer.site a:hover{color:#fff}
     <div class="fgrid">
       <div class="fbrand">
         <a class="brand" href="index.html"><span class="logo"></span>Click to sell</a>
-        <p>The simplest way to buy and sell pre-owned things with people near you. Free to list, easy to deal.</p>
+        <p>A local listings app with free basic ads. We sell digital promotion tools to sellers — not items between users.</p>
         <p style="margin-top:14px;color:#7c8aa6;font-size:.85rem">iOS &amp; Android app launching soon.</p>
       </div>
       <div>
