@@ -16,14 +16,19 @@ PAGES
 
 BUSINESS DETAILS (configured)
 -----------------------------
-  App name         Click to sell
-  Company          Click to sell
-  Address          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065
-  Support email    support@clicktosell.co.in
-  Registered email ncincotechnologies@gmail.com
-  Phone            +91 99302 38456
-  Grievance Officer Vivek Parmar
-  Last updated     23 June 2026
+  Brand / app name   Click to sell
+  Legal entity       Ncinco Technologies OPC Private Limited
+  Entity type        One Person Company (OPC) — Private Limited
+  CIN                U62099MH2025OPC437846
+  Company PAN        AAKCN0928M
+  GSTIN              27AAKCN0928M1Z1
+  Settlement bank    ICICI Bank — Ncinco Technologies OPC Private Limited
+  Address            A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065
+  Support email      support@clicktosell.co.in
+  Registered email   ncincotechnologies@gmail.com
+  Phone              +91 99302 38456
+  Grievance Officer  Vivek Parmar
+  Last updated       23 June 2026
 
 DEPLOY TO VERCEL
 ----------------
@@ -59,13 +64,26 @@ RAZORPAY SUBMISSION URLS
 
 RAZORPAY KYC — USE THESE EXACT DETAILS
 --------------------------------------
-  Business name    Click to sell
+  Legal entity     Ncinco Technologies OPC Private Limited
+  Brand name       Click to sell
+  Entity type      Private Limited (OPC)
+  CIN              U62099MH2025OPC437846
+  Company PAN      AAKCN0928M
+  GSTIN            27AAKCN0928M1Z1
+  Bank             ICICI Bank — Ncinco Technologies OPC Private Limited
   Website          https://www.clicktosell.co.in/
   Address          A321 Mastermind 4, Royal Palms, Goregaon, Mumbai 400065
   Support email    support@clicktosell.co.in
   Registered email ncincotechnologies@gmail.com
   Phone            +91 99302 38456
   Grievance Officer Vivek Parmar (ncincotechnologies@gmail.com)
+
+  Business category (dashboard): Software / SaaS / Digital services
+  Business description (dashboard):
+  "We operate a mobile listings application. We collect online payments
+   only for digital seller services — featured listing placement, listing
+   boosts, and seller subscriptions. We do not collect or process any
+   payment for items posted by users."
 
 APP STORE LINKS (update index.html when live)
 ---------------------------------------------
